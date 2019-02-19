@@ -15,7 +15,6 @@ session_files/journal1.wbjn
 session_files/journal2.wbjn
 dp0/
 progress_files/
-report_files/
 session_files/
 dp0/FFF/
 dp0/global/
@@ -23,10 +22,6 @@ dp0/FFF/DM/
 dp0/FFF/Fluent/
 dp0/FFF/MECH/
 dp0/global/MECH/
-dp0/global/MECH/FFF/
 progress_files/dp0/
 progress_files/dp0/FFF/
 progress_files/dp0/FFF/Fluent/
-report_files/dp0/
-report_files/dp0/FFF/
-report_files/dp0/FFF/Post/
