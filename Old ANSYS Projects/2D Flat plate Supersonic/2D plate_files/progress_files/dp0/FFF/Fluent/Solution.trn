@@ -1,0 +1,64 @@
+
+Build Time: Apr 11 2017 18:06:15 
+Executable Path: C:/PROGRA~1/ANSYSI~1/v181/fluent/ntbin/win64/fluent.exe
+Reading "\\winfiles.wincoe.coe.neu.edu\cifs.homedir\Win10Files\Documents\ANSYS SIMS\2D Flat plate Supersonic\2D plate_files\dp0\FFF\MECH\FFF.msh"...
+    6645 nodes, binary.
+     434 nodes, binary.
+   13539 2D interior faces, zone  1, binary.
+     434 2D wall faces, zone  5, binary.
+    6894 mixed cells, zone  2, binary.
+
+Building...
+     mesh
+     materials,
+     interface,
+     domains,
+     zones,
+	wall-surface_body
+	surface_body
+	interior-surface_body
+Done.
+
+Preparing mesh for display...
+Done.
+
+Writing Settings file "\\winfiles.wincoe.coe.neu.edu\cifs.homedir\Win10Files\Documents\ANSYS SIMS\2D Flat plate Supersonic\2D plate_files\dp0\FFF\Fluent\FFF.set"...
+	writing rp variables ... Done.
+	writing domain variables ... Done.
+	writing surface_body (type fluid) (mixture) ... Done.
+	writing interior-surface_body (type interior) (mixture) ... Done.
+	writing wall-surface_body (type wall) (mixture) ... Done.
+	writing zones map name-id ... Done.
+"Updating Setup cell..."
+"Updating Solution cell..."
+Initialization based on settings...
+
+Initialize using the hybrid initialization method.
+
+Checking case topology... 
+-This case has no inlets & no outlets 
+-Case will be initialized with constant parameters
+
+hybrid initialization is done.
+Writing data to \\\\winfiles.wincoe.coe.neu.edu\\cifs.homedir\\Win10Files\\Documents\\ANSYS SIMS\\2D Flat plate Supersonic\\2D plate_files\\dp0\\FFF\\Fluent\\FFF.ip ...
+	x-coord
+	y-coord
+	pressure
+	x-velocity
+	y-velocity
+	hyb_init-0
+	hyb_init-1
+Done.
+("Unable to update solution. Number of iterations should be greater than zero.")
+
+Error: Unable to update solution. Number of iterations should be greater than zero.
+Error Object: #f
+Writing "| gzip -2cf > FFF-Setup-Output.cas.gz"...
+Writing temporary file C:\\Users\\emellusi\\AppData\\Local\\Temp\\flntgz-137162 ...
+    6894 mixed cells, zone  2, binary.
+   13539 2D interior faces, zone  1, binary.
+     434 2D wall faces, zone  5, binary.
+    7079 nodes, binary.
+    7079 node flags, binary.
+Done.
+

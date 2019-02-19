@@ -1,5 +1,0 @@
-﻿# encoding: utf-8
-# Release 18.1
-SetScriptVersion(Version="18.1.463")
-Save(Overwrite=True)
-Save(Overwrite=True)
