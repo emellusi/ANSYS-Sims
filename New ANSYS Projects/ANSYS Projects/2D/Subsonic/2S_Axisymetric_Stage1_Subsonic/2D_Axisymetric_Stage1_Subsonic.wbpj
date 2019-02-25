@@ -2,13 +2,14 @@
 <Storage>
   <Project Version="8.1">
     <base-designpoint-name valType="String">0</base-designpoint-name>
-    <timestamp-max valType="Int64">3164</timestamp-max>
+    <timestamp-max valType="Int64">3289</timestamp-max>
     <framework-build-version valType="String">18.1.463.0</framework-build-version>
     <external-version-string valType="String">Release 18.1</external-version-string>
-    <last-saved-utc valType="String">02/20/2019 01:12:24</last-saved-utc>
+    <last-saved-utc valType="String">02/25/2019 18:51:30</last-saved-utc>
     <logHistory valType="StringArray">
       <ArrayEntry Index="0">emellusi@OPEN-LABM1-004:C:\Users\emellusi\AppData\Local\Temp\WorkbenchLogs\CoreEvents11760.log</ArrayEntry>
       <ArrayEntry Index="1">emellusi@OPEN-LABM1-004:C:\Users\emellusi\AppData\Local\Temp\WorkbenchLogs\CoreEvents13712.log</ArrayEntry>
+      <ArrayEntry Index="2">emellusi@OPEN-LABM1-011:C:\Users\emellusi\AppData\Local\Temp\WorkbenchLogs\CoreEvents12296.log</ArrayEntry>
     </logHistory>
     <expression-scope-container valType="String">Parameters</expression-scope-container>
     <project-type valType="String">WB2</project-type>
@@ -503,7 +504,7 @@
       <Object Name="/FileContainer/FileReference:F3" Version="1.0">
         <class-type valType="String">FileReference</class-type>
         <object-name valType="String">F3</object-name>
-        <member-data valType="String">{"DisplayText": "act.dat", "FileType": $$8b5a005e-e3d3-455c-b869-b871f82fbfca, "DependentFiles": [], "ContainerAssociations": [], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\act.dat", "ReferenceCount": 13}</member-data>
+        <member-data valType="String">{"DisplayText": "act.dat", "FileType": $$8b5a005e-e3d3-455c-b869-b871f82fbfca, "DependentFiles": [], "ContainerAssociations": [], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\act.dat", "ReferenceCount": 18}</member-data>
       </Object>
       <Object Name="/FileContainer/FileReference:F4" Version="1.0">
         <class-type valType="String">FileReference</class-type>
@@ -546,7 +547,7 @@
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 2991, "Input": 1393, "Output": 1393}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 3287, "Input": 1393, "Output": 1393}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">false</contains-significant-data>
       <Object Name="/Messages/StoredMessage:Message" Version="1.0">
@@ -657,6 +658,19 @@ CommandName: UpdateComponent(Component=\"/Schematic/Component:Mesh\", AllDepende
         <object-name valType="String">Message 15</object-name>
         <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": "The Mesh component in Fluid Flow (Fluent) requires user input before it can be updated. For instructions on how to address the cell in its current state, click the blue triangle in the lower right corner of the cell.", "Details": None, "Association": "", "DateTimeStamp": 02/19/2019 19:54:13, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": "0"}</member-data>
       </Object>
+      <Object Name="/Messages/StoredMessage:Message 16" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 16</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """The project has been partially saved, but some errors occured during the save.
+Failed container(s) from designpoint: Setup
+""", "Details": """   at Ansys.Core.Persistence.ProjectSaveHandler.DoProjectSave()
+   at Ansys.Core.Persistence.ProjectSaveHandler.ProjectSave()
+   at Ansys.Core.Persistence.Commands.SaveCommand.DoSave(IFullContext context, String filePath, Boolean overwrite, Boolean revertibleSave)
+   at Ansys.Core.Persistence.Commands.SaveCommand.Execute(IFullContext context)
+   at Ansys.Core.Commands.Concurrency.CommandWorkUnit.executeInContext(CommandContext subContext, IExecutionEngineCallback tracer)
+   at Ansys.Core.Commands.Concurrency.BaseWorkUnit.doExecute(IExecutionEngineCallback executionEngine, CommandContext subContext)
+   at Ansys.Core.Commands.Concurrency.BaseWorkUnit.Execute(IExecutionEngineCallback executionEngine, Boolean dontCatchExceptions)""", "Association": "", "DateTimeStamp": 02/25/2019 13:50:50, "Visibility": "Standard", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
     </Container>
     <Container Name="Parameters" Version="1.0">
       <container-type valType="String">Ansys.ParameterManager.ParameterManagerAddin:parameters</container-type>
@@ -687,7 +701,7 @@ CommandName: UpdateComponent(Component=\"/Schematic/Component:Mesh\", AllDepende
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 3092, "Input": 3025, "Output": 1399}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 3252, "Input": 3025, "Output": 1399}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">true</contains-significant-data>
       <Object Name="/Schematic/System:FFF" Version="1.0">

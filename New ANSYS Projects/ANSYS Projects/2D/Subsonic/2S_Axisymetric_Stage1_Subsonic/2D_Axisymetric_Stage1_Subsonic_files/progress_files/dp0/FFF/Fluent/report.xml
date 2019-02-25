@@ -1,7 +1,7 @@
 <FluentXMLReport>
 <version>
 Fluent
-Version: axi, dp, pbns, lam (axi, double precision, pressure-based, laminar)
+Version: 2d, dp, pbns, trans-sst (2d, double precision, pressure-based, trans-sst model)
 Release: 18.1.0
 Title: 
 </version>
@@ -11,19 +11,19 @@ Title:
 Models
 ------
 
-   Model                        Settings       
-   -----------------------------------------
-   Space                        Axisymmetric   
-   Time                         Steady         
-   Viscous                      Laminar        
-   Heat Transfer                Disabled       
-   Solidification and Melting   Disabled       
-   Species                      Disabled       
-   Coupled Dispersed Phase      Disabled       
-   NOx Pollutants               Disabled       
-   SOx Pollutants               Disabled       
-   Soot                         Disabled       
-   Mercury Pollutants           Disabled       
+   Model                        Settings               
+   -------------------------------------------------
+   Space                        2D                     
+   Time                         Steady                 
+   Viscous                      Transition SST model   
+   Heat Transfer                Disabled               
+   Solidification and Melting   Disabled               
+   Species                      Disabled               
+   Coupled Dispersed Phase      Disabled               
+   NOx Pollutants               Disabled               
+   SOx Pollutants               Disabled               
+   Soot                         Disabled               
+   Mercury Pollutants           Disabled               
 
 </Models>
 
@@ -81,13 +81,20 @@ Boundary Conditions
 
       name                id   type              
       ----------------------------------------
+      axis                6    velocity-inlet    
       rocket              16   wall              
-      axis                6    axis              
       inlet               7    velocity-inlet    
       outlet              8    pressure-outlet   
       wall-surface_body   5    wall              
 
    Setup Conditions
+
+      axis
+
+         Condition                       Value   
+         -------------------------------------
+         Velocity Specification Method   1       
+         X-Velocity (m/s)                50      
 
       rocket
 
@@ -96,17 +103,12 @@ Boundary Conditions
          Wall Motion                0       
          Shear Boundary Condition   0       
 
-      axis
-
-         Condition   Value   
-         -----------------
-
       inlet
 
          Condition                       Value   
          -------------------------------------
          Velocity Specification Method   1       
-         Axial-Velocity (m/s)            1       
+         X-Velocity (m/s)                50      
 
       outlet
 
@@ -128,9 +130,10 @@ Solver Settings
 
    Equations
 
-      Equation   Solved   
-      -----------------
-      Flow       yes      
+      Equation     Solved   
+      -------------------
+      Flow         yes      
+      Turbulence   yes      
 
    Numerics
 
@@ -140,21 +143,30 @@ Solver Settings
 
    Relaxation
 
-      Variable      Relaxation Factor   
-      -------------------------------
-      Pressure      0.3                 
-      Density       1                   
-      Body Forces   1                   
-      Momentum      0.7                 
+      Variable                    Relaxation Factor   
+      ---------------------------------------------
+      Pressure                    0.3                 
+      Density                     1                   
+      Body Forces                 1                   
+      Momentum                    0.7                 
+      Turbulent Kinetic Energy    0.8                 
+      Specific Dissipation Rate   0.8                 
+      Intermittency               0.8                 
+      Momentum Thickness Re       0.8                 
+      Turbulent Viscosity         1                   
 
    Linear Solver
 
-                   Solver     Termination   Residual Reduction   
-      Variable     Type       Criterion     Tolerance            
-      --------------------------------------------------------
-      Pressure     V-Cycle    0.1                                
-      X-Momentum   Flexible   0.1           0.7                  
-      Y-Momentum   Flexible   0.1           0.7                  
+                                  Solver     Termination   Residual Reduction   
+      Variable                    Type       Criterion     Tolerance            
+      -----------------------------------------------------------------------
+      Pressure                    V-Cycle    0.1                                
+      X-Momentum                  Flexible   0.1           0.7                  
+      Y-Momentum                  Flexible   0.1           0.7                  
+      Turbulent Kinetic Energy    Flexible   0.1           0.7                  
+      Specific Dissipation Rate   Flexible   0.1           0.7                  
+      Intermittency               Flexible   0.1           0.7                  
+      Momentum Thickness Re       Flexible   0.1           0.7                  
 
    Pressure-Velocity Coupling
 
@@ -164,19 +176,26 @@ Solver Settings
 
    Discretization Scheme
 
-      Variable   Scheme                
-      ------------------------------
-      Pressure   Second Order          
-      Momentum   Second Order Upwind   
+      Variable                    Scheme                
+      -----------------------------------------------
+      Pressure                    Second Order          
+      Momentum                    Second Order Upwind   
+      Turbulent Kinetic Energy    First Order Upwind    
+      Specific Dissipation Rate   First Order Upwind    
+      Intermittency               First Order Upwind    
+      Momentum Thickness Re       First Order Upwind    
 
    Solution Limits
 
-      Quantity                    Limit   
-      ---------------------------------
-      Minimum Absolute Pressure   1       
-      Maximum Absolute Pressure   5e+10   
-      Minimum Temperature         1       
-      Maximum Temperature         5000    
+      Quantity                         Limit    
+      ---------------------------------------
+      Minimum Absolute Pressure        1        
+      Maximum Absolute Pressure        5e+10    
+      Minimum Temperature              1        
+      Maximum Temperature              5000     
+      Minimum Turb. Kinetic Energy     1e-14    
+      Minimum Spec. Dissipation Rate   1e-20    
+      Maximum Turb. Viscosity Ratio    100000   
 
 </SolverSettings>
 
