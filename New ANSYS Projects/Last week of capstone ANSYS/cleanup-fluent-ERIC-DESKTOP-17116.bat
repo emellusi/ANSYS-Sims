@@ -1,0 +1,12 @@
+echo off
+set LOCALHOST=%COMPUTERNAME%
+set KILL_CMD="C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v193\fluent/ntbin/win64/winkill.exe"
+
+"C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v193\fluent\ntbin\win64\tell.exe" ERIC-DESKTOP 64894 CLEANUP_EXITING
+if /i "%LOCALHOST%"=="ERIC-DESKTOP" (%KILL_CMD% 2256) 
+if /i "%LOCALHOST%"=="ERIC-DESKTOP" (%KILL_CMD% 12536) 
+if /i "%LOCALHOST%"=="ERIC-DESKTOP" (%KILL_CMD% 13056) 
+if /i "%LOCALHOST%"=="ERIC-DESKTOP" (%KILL_CMD% 17780) 
+if /i "%LOCALHOST%"=="ERIC-DESKTOP" (%KILL_CMD% 17116) 
+if /i "%LOCALHOST%"=="ERIC-DESKTOP" (%KILL_CMD% 8444)
+del "C:\Users\Eric Mellusi\Documents\Last week of capstone ANSYS\cleanup-fluent-ERIC-DESKTOP-17116.bat"

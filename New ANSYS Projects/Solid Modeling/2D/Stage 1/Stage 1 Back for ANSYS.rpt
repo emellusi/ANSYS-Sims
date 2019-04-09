@@ -1,0 +1,63 @@
+*****************************************************************
+      SolidWorks Corporation - IGES Processor Status Report
+*****************************************************************
+=================================================================
+General Information
+=================================================================
+Sending System Product I.D.  : Stage 1 Back for ANSYS
+Receiving System Product I.D.: Stage 1 Back for ANSYS
+File Name                    : \\winfiles.wincoe.coe.neu.edu\cifs.homedir\Win10Files\Documents\GitHub\ANSYS-Sims\New ANSYS Projects\Solid Modeling\2D\Stage 1\Stage 1 Back for ANSYS.IGS
+Sending System               : SolidWorks 2018
+Preprocessor Version         : SolidWorks 2018
+File Creation Date           : 190328.121550
+Model Creation Date          : 190328.121550
+Units                        : IN
+Model Space Scale            : 1
+Author                       : emellusi
+Organization                 : 
+
+
+=================================================================
+Entity Processing Information
+=================================================================
+
+
+=================================================================
+Precision analysis of IGES file:
+=================================================================
+  Most prevalent number of significant digits:               2
+  Highest number of significant digits:                     11
+  Average number of significant digits:                6.44444
+  Maximum distance to origin:                          49.8562
+  Minimum distance to origin:                          3.19926
+  Effective number of significant digits:              10.9442
+
+
+=================================================================
+Entity Summary
+=================================================================
+-----------------------------------------------------------------
+Type Name                                         Count Converted
+---- ----                                         ----- ---------
+102  Composite curve                                  2         2
+110  Line                                             7         7
+126  Rational B-spline curve                          7         7
+128  Rational B-spline surface                        1         1
+142  Curve on a parametric surface                    1         1
+144  Trimmed parametric surface                       1         1
+314  Color definition                                 1         1
+_________________________________________________________________
+
+
+=================================================================
+Result Summary
+=================================================================
+SolidWorks Feature Type                Count
+-----------------------                -----
+Solid feature(s)                       0
+Surface feature(s)                     1
+Curve/Sketch feature(s)                0
+--------------------------------------------
+Start time: Tuesday, April 09, 2019 11:18:53
+Finish time: Tuesday, April 09, 2019 11:18:54
+Processing time: 0 days, 00 hours, 00 mins, 01 secs
